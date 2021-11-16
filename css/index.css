@@ -4,6 +4,16 @@ body {
 a {
   text-decoration: none;
 }
+.header-ttl, .header-nav-item, .all-service, .all-news,
+.news-item, .blog-img, .blog-ttl, .all-blog, .company,
+.recruit, .contact-btn, .footer-nav-item {
+  transition: opacity 0.3s;
+}
+.header-nav-item:hover, .all-service:hover, .header-ttl:hover, .all-news:hover,
+.news-item:hover, .blog-img:hover, .blog-ttl:hover, .all-blog:hover,
+.company:hover, .recruit:hover, .contact-btn:hover,.footer-nav-item:hover {
+  opacity: 0.7;
+}
 
 header {
   height: 70px;
@@ -24,16 +34,6 @@ header {
 }
 .header-nav-item {
   font-weight: bold;
-  transition: opacity 0.3s;
-}
-.header-nav-item:hover {
-  opacity: 0.7;
-}
-.header-ttl {
-  transition: opacity 0.3s;
-}
-.header-ttl:hover {
-  opacity: 0.7;
 }
 .header-nav-item a {
   color: #000;
@@ -46,23 +46,17 @@ header {
 .top-mv {
   background-image: url(../img/mv.png);
   background-size: cover;
-  height: 35vw;
   width: 100%;
   background-position: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .top-mv-container {
   text-align: center;
-  align-items: center;
   color: #fff;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  margin: 10rem auto;
   width: 80%;
-  height: 3.2rem;
 }
 .top-mv-ttl {
   font-size: 3rem;
@@ -143,11 +137,8 @@ header {
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  transition: opacity 0.3s;
 }
-.all-service:hover {
-  opacity: 0.7;
-}
+
 
 /* news */
 .news {
@@ -177,18 +168,11 @@ li {
   background: #cd0224;
   padding: 1rem;
   font-weight: bold;
-  transition: opacity 0.3s;
 }
-.all-news:hover {
-  opacity: 0.7;
-}
+
 .news-item {
   background: #fff;
   margin: 10px 0;
-  transition: opacity 0.3s;
-}
-.news-item:hover {
-  opacity: 0.7;
 }
 .news-item a {
   color: #000;
@@ -229,22 +213,16 @@ li {
 .blog-img {
   width: 100%;
   display: inline-block;
-  transition: opacity 0.2s;
 }
-.blog-img:hover {
-  opacity: 0.7;
-}
+
 .blog-date {
   padding: 10px 0;
 }
 .blog-ttl {
   color: #000;
   font-weight: bold;
-  transition: opacity 0.2s;
 }
-.blog-ttl:hover {
-  opacity: 0.7;
-}
+
 .all-blog {
   width: 20vw;
   margin: 2vw auto;
@@ -255,13 +233,10 @@ li {
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  transition: opacity 0.3s;
-}
-.all-blog:hover {
-  opacity: 0.7;
 }
 
-/* company */
+
+/* about */
 .about {
   display: flex;
   height: 240px;
@@ -279,17 +254,20 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s;
+  position: relative;
 }
-.company:hover,
-.recruit:hover {
-  opacity: 0.7;
-}
+
 .company-ttl,
 .recruit-ttl {
-  color: #fff;
   font-weight: bold;
   font-size: 24px;
+  color: #fff;
+}
+.company a,
+.recruit a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 /* contact */
 .contact {
@@ -311,11 +289,8 @@ li {
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: bold;
-  transition: opacity 0.3s;
 }
-.contact-btn:hover {
-  opacity: 0.7;
-}
+
 /* footer */
 footer {
   padding: 20px 0;
@@ -335,12 +310,6 @@ footer {
 }
 .footer-nav-list {
   display: flex;
-}
-.footer-nav-item {
-  transition: opacity 0.3s;
-}
-.footer-nav-item:hover {
-  opacity: 0.7;
 }
 .footer-nav-item a {
   color: #fff;
